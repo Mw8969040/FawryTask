@@ -21,18 +21,19 @@ namespace FawryTask
 
         public void PrintFine()
         {
-            Console.WriteLine($"Car PlateNumber : {plateNumber}");
-            Console.WriteLine($"Total amount {TotalAmount}");
-            Console.WriteLine($"All Violations");
+            Console.WriteLine($"\nCar PlateNumber : {plateNumber}");
+            Console.WriteLine($"Total amount {TotalAmount}\n");
+            Console.WriteLine($"All Violations\n");
 
             foreach (var v in violations)
             {
 
                 Console.WriteLine($"Description {v.descryption}");
                 Console.WriteLine($"price {v.price}\n");
+               
 
             }
-            
+            Console.WriteLine("========================================");
         }
     }
 }

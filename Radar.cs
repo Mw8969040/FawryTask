@@ -8,8 +8,8 @@ namespace FawryTask
 {
     public class Radar
     {
-        public List<Rules>? rules; 
-        public List<Fine>? fines;
+        public List<Rules>? rules = new List<Rules>(); 
+        public List<Fine>? fines = new List<Fine>();
 
         public void AddNewRule(Rules rule)
         {
@@ -41,7 +41,7 @@ namespace FawryTask
 
         public void PrintAllFines()
         {
-            Console.WriteLine("========== All Fines ========== \n");
+            Console.WriteLine("\n========== All Fines ========== \n");
 
             foreach(var fine in fines)
             {
