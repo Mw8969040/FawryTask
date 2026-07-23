@@ -11,10 +11,10 @@ namespace FawryTask
         public string? plateNumber { get; set; }
         public  DateTime date { get; set; }
         public Vehicletype vehicleType { get; set; }
-        bool speed { get; set; }
-        bool seatbelt { get; set; }
+        public double speed { get; set; }
+        public bool seatbelt { get; set; }
 
-        public CarsData(string? plateNumber , DateTime date , Vehicletype vehicleType ,bool speed , bool seatbelt)
+        public CarsData(string? plateNumber , DateTime date , Vehicletype vehicleType ,double speed , bool seatbelt)
         {
             this.plateNumber = plateNumber;
             this.date = date;

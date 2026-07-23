@@ -8,5 +8,14 @@ namespace FawryTask
 {
     public class Violation
     {
+        public string? descryption { get; set; }
+        public decimal price { get; set; }
+
+        public Violation(string? descryption , decimal price )
+        {
+            this.descryption = descryption;
+            this.price = price;
+             
+        }
     }
 }

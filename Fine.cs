@@ -8,5 +8,6 @@ namespace FawryTask
 {
     public class Fine
     {
+       
     }
 }
