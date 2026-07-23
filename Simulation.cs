@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace FawryTask
 {
-    public class Simulation
+    public static class Simulation
     {
+
     }
 }

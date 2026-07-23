@@ -8,5 +8,45 @@ namespace FawryTask
 {
     public class Radar
     {
+        public List<Rules>? rules; 
+        public List<Fine>? fines;
+
+        public void AddNewRule(Rules rule)
+        {
+            rules?.Add(rule);
+        }
+
+        public Fine? CarPreview(CarsData car)
+        {
+            List<Violation> violations = new List<Violation>();
+         
+            foreach(var rule in rules)
+            {
+               var violation = rule.Check(car);
+
+                if(violation != null) violations.Add(violation);
+            }
+
+            if(violations.Count > 0)
+            {
+                Fine fine = new(car.plateNumber,violations); 
+                fines.Add(fine);
+                fine.PrintFine();
+
+                return fine;
+            }
+
+            return null;
+        }
+
+        public void PrintAllFines()
+        {
+            Console.WriteLine("========== All Fines ========== \n");
+
+            foreach(var fine in fines)
+            {
+                Console.WriteLine($"car Plate : {fine.plateNumber}  | Tolal Amount : {fine.TotalAmount}");
+            }
+        }
     }
 }

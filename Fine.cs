@@ -17,7 +17,7 @@ namespace FawryTask
             this.violations = violations;
         }
 
-        private decimal TotalAmount => violations?.Sum(v => v.price)??0;
+        public decimal TotalAmount => violations?.Sum(v => v.price)??0;
 
         public void PrintFine()
         {
